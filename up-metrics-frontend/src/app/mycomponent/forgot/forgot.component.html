@@ -1,0 +1,22 @@
+<div class="container w-25">
+<form  #updateinfo="ngForm" (ngSubmit)="forgot(updateinfo.value)">
+    <div class="form-outline mb-4">
+        <label class="form-label" for="name">Name</label>
+        <input autocomplete="name" type="text" ngModel  name="name" id="name" class="form-control" required />
+    </div>
+
+    <div class="form-outline mb-4">
+      <label class="form-label" for="gmail">Email</label>
+      <input autocomplete="cc-number" type="gmail" ngModel name="gmail" id="gmail" class="form-control"
+        placeholder="email address" required />
+    </div>
+
+    <div class="form-outline mb-4">
+      <label class="form-label" for="dob">Date Of Birth</label>
+      <input type="date" autocomplete="bday-day"  ngModel name="dob"  id="dob" class="form-control" placeholder="01-02-2000" required >
+    
+    </div>
+    <button class="btn btn-primary mx-2 m-auto display-block" type="submit">Apply forgot</button>
+    <a class="btn btn-primary mx-2 m-auto display-block" routerLink="/">Login</a>
+</form>
+</div>

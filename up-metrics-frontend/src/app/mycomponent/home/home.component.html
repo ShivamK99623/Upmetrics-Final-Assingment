@@ -1,0 +1,36 @@
+<div class="container " ng-controller="EventController">
+    
+    <div class="card  py-5 m-auto" style="width: 18rem;">
+        <img class="card-img-top" src={{img}} alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Name:-{{name}}</h5>
+          <p class="card-text">Email:-{{gmail}}</p>
+          <p class="card-text">Dob:-{{dob}}</p>
+          <p class="card-text">Reg-Date:-{{RegDate}}</p>
+        </div>
+      </div>
+<form  class="mx-auto my-5 border border-primary p-2" #updateinfo="ngForm" style="width: 18rem;" (ngSubmit)="update(updateinfo.value)">
+    <div class="form-outline mb-4">
+        <label class="form-label" for="name">Name</label>
+        <input autocomplete="name" type="text" ngModel  name="name" id="name" class="form-control" required />
+    </div>
+
+    <div class="form-outline mb-4">
+      <label class="form-label" for="image">Image-Upload</label>
+      <input autocomplete="cc-number" type="file" ngModel name="img" id="img" class="form-control"
+        placeholder="email address" required />
+    </div>
+
+    <div class="form-outline mb-4">
+      <label class="form-label" for="dob">Date Of Birth</label>
+      <input type="date" autocomplete="bday-day"   ngModel name="dob"  id="dob" class="form-control" placeholder="01-02-2000" required >
+    
+    </div>
+    <button class="btn btn-primary mx-2 m-auto display-block" type="submit">Update</button>
+    <div  (click)="logout($event)" class="btn btn-primary" >logout</div>
+</form>
+
+
+
+
+</div>

@@ -1,0 +1,32 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+   <style>
+       form,h1{
+           text-align: center;
+       }
+       input{
+           display: block;
+           margin: auto;
+           width: 200px;
+          
+       }button{
+        background: rgb(100, 100, 255);
+           color: white;
+           margin: 5px 0px;
+           border-radius:4px ;
+       }
+   </style>
+<body>
+    <h1>Enter new password</h1>
+    <form action="/api/auth/reset" method="post">
+        <input type="password" name="password">
+        <button type="submit">reset</button>
+    </form>
+</body>
+</html>
